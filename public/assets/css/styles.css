@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+    background: url("../../images/lsbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(350px,90%);
+    background: rgb(233, 233, 233);
+    border-radius: 15px;
+}
+.logo {
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 2px;
+    margin-top: 15px;
+}
+form {
+    font-size: 1rem;
+    padding: 0.5em 2.5em 1em 2.5em;
+    box-sizing: border-box;
+}
+.heading {
+    font-family: "Lobster", cursive;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.text {
+    position:relative;
+    margin: 1.7em 0;
+}
+.text + .text {
+    margin-top: 30px ;
+}
+.text input{
+    width: 80%;
+    padding: 0 50px;
+    height: 1.875em;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: "Heebo",sans-serif;
+    opacity: 0.8;
+}
+#text-second input{ /* space for pass-check icon */
+    width: 70%;
+}
+#pass-check {  /* for password check icon */
+    position: absolute;
+    top: 70%;
+    right: 3px;
+    transform: translateY(-70%);
+    cursor: pointer;
+}
+.text #line::before {  /*for line below input field */
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #adadad;
+    transition: .5s;
+}
+.text input:focus ~ #line::before{
+    background: #108adb;
+}
+input[type="submit"]{
+    cursor: pointer;
+    display: block;
+    width: min(50%,150px);
+    margin: 30px auto 20px;
+    padding: 1.1em;
+    color: rgb(22, 22, 22);
+    background: #4f9dd1;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 0;
+    transition: 0.5s;
+}
+svg {
+    height: 25px;
+    margin-bottom: -25px;
+    margin-left: 5px;
+}
+
+#message {
+    width: 70%;
+    margin: auto;
+    padding: 7px 5px;
+    color: rgb(165, 66, 0);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes error {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width:650px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:400px) {
+    :root {
+        font-size: 14px;
+    }
+}
